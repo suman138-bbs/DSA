@@ -25,15 +25,39 @@ using namespace std;
 // }
 
 // Print Extreme in array
+// int main(){
+//   int a[]={1,2,3,4,5,6,7};
+//   int last = sizeof(a)/sizeof(int);
+//   last =last-1;
+//   for(int i = 0;i <=last/2;i++){
+//     cout <<a[i] << a[last-i];
+//   }
+//   return 0;
+  
+// }
+
+/**
+ * Reverse an array
+*/
+
 int main(){
   int a[]={1,2,3,4,5,6,7};
-  int last = sizeof(a)/sizeof(int);
-  last =last-1;
-  for(int i = 0;i <=last/2;i++){
-    cout <<a[i] << a[last-i];
-  }
+ int last =6;
+ int start = 0;
+
+  cout <<"Reverse array is";
+    for(int i = 0;i <=3;i++){
+      int temp = a[start];
+      a[start] = a[last];
+      a[last] = temp;
+      last--;
+      start++;
+    }
+        for(int i = 0;i <=6;i++){
+          cout <<a[i]<<endl;
+        }
+
   return 0;
   
 }
-
 
