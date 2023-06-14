@@ -40,24 +40,31 @@ using namespace std;
  * Reverse an array
 */
 
-int main(){
-  int a[]={1,2,3,4,5,6,7};
- int last =6;
- int start = 0;
+// int main(){
+//   int a[]={1,2,3,4,5,6,7};
+//  int last =6;
+//  int start = 0;
 
-  cout <<"Reverse array is";
-    for(int i = 0;i <=3;i++){
-      int temp = a[start];
-      a[start] = a[last];
-      a[last] = temp;
-      last--;
-      start++;
-    }
-        for(int i = 0;i <=6;i++){
-          cout <<a[i]<<endl;
-        }
+//   cout <<"Reverse array is";
+//     for(int i = 0;i <=3;i++){
+//       int temp = a[start];
+//       a[start] = a[last];
+//       a[last] = temp;
+//       last--;
+//       start++;
+//     }
+//         for(int i = 0;i <=6;i++){
+//           cout <<a[i]<<endl;
+//         }
 
-  return 0;
+//   return 0;
   
-}
+// }
 
+int main(){
+  int a[] = {2,3,4,5,6,7,8};
+  for(int i=0;i<7;i++){
+    
+  }
+
+}
