@@ -14,17 +14,17 @@
 // Binary Search
 
 function b_search(arr,i,j,n){
-     mid= (i+j)/2
+     mid=Math.floor( (i+j)/2)
      if(arr[mid]==n){
         return mid
      }
      else if (arr[mid]>n){
         j=mid-1
-        b_search(arr,i,j,n)
+        return b_search(arr,i,j,n)
      }
-     else if (arr[mid]>n){
+     else if (arr[mid]<n){
         i=mid+1
-        b_search(arr,i,j,n)
+        return b_search(arr,i,j,n)
      }
 
      else{
