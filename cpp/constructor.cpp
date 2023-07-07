@@ -1,4 +1,7 @@
+///Assignment Number 34
+
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 
 // class Cuboid{
@@ -72,14 +75,58 @@ using namespace std;
 
 /////////////////////////////////////////////////////////////////////
  
- class Number {
+//  class Number {
 
-  int size;
-  int *arr;
-  public:
-  Number(int a,){
+//   int size;
+//   int **arr;
+//   public:
+//   Number(){
 
-  }
- };
+//   }
+//   Number(int size){
+//       arr = (int**)calloc(size,8);
+//   }
+//   ~Number(){
+//     free(arr);
+//   }
 
+//   Number(Number &N){
+
+//   }
+//  };
+
+
+//  int main(){
+//     Number n(2);
+   
+     
+
+
+//  }
+
+//////////////////////////////////////////////////////////////
+
+/*initilizer =>initlize ariable using initilizer
+*/
+// class Date{
+//     int d;
+//     int m;
+//     int y;
+//     public:
+//     Date(int d,int m,int y):d(d),m(m),y(y){
+
+//     }
+
+//  void showData(){
+//       cout <<d <<m<< y<<endl;
+//    }
+// };
+
+// int main(){
+//     Date d(2023,7,7);
+//     d.showData();
+
+// }
+
+///////////////////////////////////////////
 
