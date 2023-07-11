@@ -133,6 +133,7 @@ int lastIndex;
         for(int i=0;i<=lastIndex;i++){
             temp[i] = ptr[i];
         }
+        delete []ptr;
         ptr=temp;
         capacity = lastIndex+1;
     }
