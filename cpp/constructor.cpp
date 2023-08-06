@@ -130,3 +130,17 @@ using namespace std;
 
 ///////////////////////////////////////////
 
+
+class Book{
+
+    public:
+    Name;
+    int *rate;
+
+};
+
+int main(){
+     Book b1,b2;
+    
+} 
+
