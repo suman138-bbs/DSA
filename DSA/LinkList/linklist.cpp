@@ -255,6 +255,15 @@ class CLL{
         return NULL;
     }
 
+    void addAfterSpecificNode(node *add,int value){
+        node *temp=new node;
+        temp->item=value;
+        temp->next=add->next;
+        add->next=temp;
+      
+    }
+    
+
 
 
 };
