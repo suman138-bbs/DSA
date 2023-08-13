@@ -262,7 +262,20 @@ class CLL{
         add->next=temp;
       
     }
+
+    void deleteFirstNode(){
+      node * t=last->next->next;
+      delete last->next;
+      last->next=t;
+    }
     
+    CLL(CLL &c){
+      last =c.last;
+
+
+    }
+
+    node * 
 
 
 
