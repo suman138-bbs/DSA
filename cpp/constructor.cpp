@@ -1,146 +1,129 @@
-///Assignment Number 34
-
 #include<iostream>
-#include<stdlib.h>
+#include<stdio.h>
 using namespace std;
 
 // class Cuboid{
-//     int len;
-//     int b;
-//     int h;
+//     int length;
+//     int breadth;
+//     int height;
 //     public:
-//     Cuboid(int a,int b,int c){
-//         len  = a;
-//         b= b;
-//         h= c;
+//     Cuboid(int len,int bre,int h){
+//         length=len;
+//         breadth=bre;
+//         height=h;
 //     }
-    
-//   void showData(){
-//     cout << len <<endl<< b <<endl<< h <<endl;
-//   }
+
+//    void showData(){
+//         cout <<length<<breadth<<height<<endl;
+//     }
+
+
+
 // };
 
 // int main(){
-  
-//   Cuboid c(3,4,5);
-//   c.showData();
-
+//     Cuboid c1(20,30,40);
+//     c1.showData();
+    
 // }
 
-
-///////////////////////////////////////////////////////
-// #include<iostream>
-// using namespace std;
-
-// class Customer{
-//     int custId;
-
-//     int email;
-//     int phone;
+// class Complex{
+//     int real;
+//     int imgi;
 //     public:
-//     Customer(int a,int b,int c){
+//     Complex(int r,int i){
+//         real = r;
+//         imgi = i;
+
+
+//     }
+//     void showData(){
+//         cout <<real<<" "<<imgi<<endl;
         
-//     }
-    
-//     Customer(){}
-    
-  
+//         }
+        
+
+
 // };
-
-/////////////////////////////////////////////
-
-// class Complex {
-
-//   int real;
-//   int imgi;
-//   public:
-//   Complex(int a,int b){
-//     real = a;
-//     imgi = b;
-//   }
-
-//   void showData(){
-//       cout << "Real "<<real <<" Imaginary "<<imgi<<endl;
-//   }
-// };
-
 // int main(){
-//   Complex c[5] = {Complex(2,3),Complex(6,3),Complex(7,3),Complex(9,3),Complex(10,3),};
-//   for(int i = 0;i<5;i++){
-//     c[i].showData();
-//   }
+//     Complex c1(20,30);
+//     Complex arr[5]={{20,40},{50,60},{70,80},{50,60},{70,80}};
+//     for(int i=0;i<5;i++){
+//         arr[i].showData();
+//     }
 
+//     c1.showData();
+
+    
 // }
 
-
-/////////////////////////////////////////////////////////////////////
- 
-//  class Number {
-
-//   int size;
-//   int **arr;
-//   public:
-//   Number(){
-
-//   }
-//   Number(int size){
-//       arr = (int**)calloc(size,8);
-//   }
-//   ~Number(){
-//     free(arr);
-//   }
-
-//   Number(Number &N){
-
-//   }
-//  };
-
-
-//  int main(){
-//     Number n(2);
-   
-     
-
-
-//  }
-
-//////////////////////////////////////////////////////////////
-
-/*initilizer =>initlize ariable using initilizer
+/**
+ * Implement deep copy to avoid memory location 
 */
-// class Date{
-//     int d;
-//     int m;
-//     int y;
-//     public:
-//     Date(int d,int m,int y):d(d),m(m),y(y){
 
+// class Number{
+//     int size;
+//     int *arr;
+//     public:
+//     Number(){}
+//     Number(int s){
+//         size =s;
+//        arr= new int[s];
+//        cout <<"Array created Successfully"<<endl;
+//     }
+//    void addToArray(int inc){
+//         for(int i=0;i<size;i++){
+//             arr[i]=i+inc;
+//         }
+//     }
+//     void show(){
+//         for(int i=0;i<size;i++){
+//             cout << arr[i] <<" ";
+//         }
+//         cout <<endl;
 //     }
 
-//  void showData(){
-//       cout <<d <<m<< y<<endl;
-//    }
+//     Number(Number &n){
+//         size = n.size;
+//         arr =   new int [size];
+        
+//         for(int i =0;i<size;i++){
+            
+//            arr[i]=n.arr[i];
+           
+//         }
+
+//     }
+//     ~Number(){
+//         delete []arr;
+//     }
+
+    
 // };
 
 // int main(){
-//     Date d(2023,7,7);
-//     d.showData();
-
+//     Number n1(5);
+//     n1.addToArray(10);
+//     Number n2(n1);
+//     n2.show();
+//     n2.addToArray(50);
+//     n1.show();
+//     n2.show();
+    
+    
 // }
 
-///////////////////////////////////////////
 
-
-class Book{
-
-    public:
-    Name;
-    int *rate;
-
+class Date{
+    int d,m,y;
+  public:
+    Date():d(26),m(8),y(2000)
+    {
+        cout <<d<<'-'<<m<<'-'<<y;
+    }
+    
 };
 
 int main(){
-     Book b1,b2;
-    
-} 
-
+    Date d1;
+}
