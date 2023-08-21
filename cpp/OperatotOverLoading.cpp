@@ -75,5 +75,5 @@ int main(){
     Time t1,t2;
     t1.data(3,40,41);
     t2.data(4,40,41);
-    cout<<t1;
+    // cout<<t1;
 }
