@@ -5,6 +5,11 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "*.tcc": "cpp",
+        "functional": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "streambuf": "cpp"
     }
 }
