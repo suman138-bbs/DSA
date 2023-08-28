@@ -31,7 +31,8 @@ public:
     }
 
     Stack(Stack &S){
-        ptr =new int[S.capacity];
+        capacity = S.capacity;
+        ptr =new int[capacity];
         for(int i=0;i<capacity;i++)
             {
                 ptr[i]=S.ptr[i];
