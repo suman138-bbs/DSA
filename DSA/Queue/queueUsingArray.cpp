@@ -1,4 +1,4 @@
-#include<stdint.h>
+#include<stdio.h>
 #include<iostream>
 using namespace std;
 class Queue
@@ -8,6 +8,7 @@ private:
     int front;
     int rear;
     int *ptr;
+
 public:
     Queue():capacity(capacity){
         ptr = new int[capacity];
@@ -18,8 +19,14 @@ public:
     }
 
     Queue(Queue &S){
+        int *t=S.ptr;
+        int front = S.front;
+
         capacity = S.capacity;
         ptr =new int[capacity];
+        for(int i=0;i<capacity;i++){
+             ptr[i]=t[i];
+        }
     }
 
     void insert(int val){
@@ -27,9 +34,7 @@ public:
              front++;
              ptr[front]=val;
          }
-        if(capacity==rear+1){
-            cout << "Queue Overflow"<<endl;
-        }
+        
         if(front==0 && rear+2!=capacity){
               rear++;
               ptr[rear] = val;
@@ -70,22 +75,40 @@ public:
         else return false;
     }
 
-    // int numberOfELement(){
-    //     int count=0;
-    //     if(front<rear){
-    //     for(int i=front;i<=rear;i++){
-    //         count++;
-    //     }
-    //     }
-    //     else{
-    //         for(int i=front;i<rear;){
-    //             count++;
-    //             if()
-    //         }
+  
+    
 
-    //     }
-    }
-    ~Queue(){
+     bool QueueIsOverflow(){
+          if(front==0 && rear==capacity-1){
+             return true;
+          }
+          if(front-1==rear) return true;
+          else{
+             return false;
+          }
+     
+     int numberOfElement(){
+        int count=0;
+         if(front<rear){
+            for(int i=front;i<=rear;i++){
+                count++;
+            }
+         }
+         else{
+             for(int i=0;i<=rear;i++){
+                count++;
+             }
+             for(int i=front;i<capacity;i++){
+                count++;
+             }
+         }
 
-    }
+     }
+
+
+     
+
+
+     }
+   
 };

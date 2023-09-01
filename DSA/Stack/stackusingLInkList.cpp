@@ -54,8 +54,13 @@ public:
        
     Stack(Stack &S){
        node *temp = new node;
-       top = ;
-       while(S){
+       top = temp;
+       node *t=S.top;
+       while(t->next!=NULL){
+        top->item=t->item;
+        t=t->next;
+        
+
             
        }
     }
