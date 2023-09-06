@@ -19,7 +19,7 @@ public:
     Deque(Deque &d){
         
         node *t =d.front;
-        while (t->next!=NULL)
+        while (t!=NULL)
         { 
             if(front==NULL)
            {
