@@ -23,8 +23,8 @@ public:
 
     void insert(int val){
          node *temp  = new node;
-         temp->item= val;
          temp->left= NULL;
+         temp->item= val;
          temp->right= NULL;
         if(root==NULL){
             root=temp;
@@ -66,16 +66,24 @@ public:
             }
         }
         // if the value situated on the leaf node
-        if(p->left->item==val){
-            delete t;
-            p->left = NULL;
-        }
-        else{
-            delete t;
-            p->right = NULL;
+        if(t->left==NULL && t->right==NULL){
+            if(p->left->item==val){
+                delete t;
+                p->left = NULL;
+            }
+            else{
+                delete t;
+                p->right = NULL;
+            }
+            return;
         }
 
-        // single child
+
+        
+
+
+
+        
         
 
 
