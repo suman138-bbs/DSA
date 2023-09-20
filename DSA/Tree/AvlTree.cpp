@@ -16,6 +16,34 @@ private:
 public:
     AVL();
     ~AVL();
+
+    node* searchNode(int val){
+        node *t =root;
+        while(t->item!=val){
+            if(t->item > val){
+                t=t->left;
+            }
+            else{
+                t=t->right;
+            }
+
+        }
+        return t;
+
+    }
+
+    int getBalanceFactor(int no){
+        node *temp = searchNode(no);
+        int hr = temp->left->height+1;
+        int hl = temp->left->height+1;
+        return hr-hl;
+
+        
+    }
+
+    void leftRotation(){
+        
+    }
 };
 
 AVL::AVL()
@@ -25,4 +53,5 @@ AVL::AVL()
 
 AVL::~AVL()
 {
+
 }
