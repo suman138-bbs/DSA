@@ -41,8 +41,34 @@ public:
         
     }
 
-    void leftRotation(){
+    // void leftRotation(){
         
+    // }
+
+    void insert(int val){
+          node *t = root;
+          node *p = root;
+          node *temp = new node;
+          temp->item=val;
+          temp->left  =NULL;
+          temp->right  =NULL;
+          temp->height = 0;
+
+          if(root==NULL){
+            root=temp;
+          }
+          while(t){
+            if(t->item > val){
+                p=t;
+                t=t->left;
+                
+            }
+            else{
+                p=t;
+                t=t->right;
+            }
+
+          }
     }
 };
 
