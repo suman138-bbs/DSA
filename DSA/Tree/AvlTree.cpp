@@ -57,17 +57,27 @@ public:
           if(root==NULL){
             root=temp;
           }
+          t=root;
           while(t){
             if(t->item > val){
                 p=t;
+                p->height++;
                 t=t->left;
                 
             }
             else{
                 p=t;
+                p->height++;
                 t=t->right;
+                
             }
 
+          }
+          if(p->item >val){
+            p->left = temp;
+          }
+          else{
+            p->right = temp;
           }
     }
 };
