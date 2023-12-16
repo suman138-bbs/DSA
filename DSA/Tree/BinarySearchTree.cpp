@@ -1,101 +1,83 @@
-#include<stab.h>
-#include<iostream>
+#include <iostream>
+#include <stdio.h>
 using namespace std;
 
-struct node{
-    node *left;
-    int item;
-    node *right;
-
+struct node
+{
+  node *left;
+  int item;
+  node *right;
 };
-class BST{
+
+class BST
+{
 private:
- node *root;
-    
+  node *root;
+
 public:
-    BST();
-    ~BST();
-
-    bool isEmplty(){
-        if(root) return true;
-        return false;
+  BST();
+  BST(BST&);
+  bool isEmpty()
+  {
+    if (root == NULL)
+    {
+      cout << "BST is Empty" << endl;
     }
-
-    void insert(int val){
-         node *temp  = new node;
-         temp->left= NULL;
-         temp->item= val;
-         temp->right= NULL;
-        if(root==NULL){
-            root=temp;
-        }
-        else{
-            node*t = root;
-            node *flag=root;
-            while(t){
-                if(t->item > temp->item){
-                    flag=t;
-                    t=t->left;
-                }
-                else{
-                    flag=t;
-                    t=t->right;
-                }
-
-            }
-            if(flag->item > temp->item){
-                flag->left=temp;
-            }
-            else{
-                flag->right=temp;
-            }
-        }
+    else
+    {
+      cout << "BST isn't empty" << endl;
     }
+  }
 
-    void deleteNode(int val){
-        node *t= root;
-        node *p = root;
-        while(t->item!=val){
-            if(t->item > val){
-                p=t;
-                t=t->left;
-            }
-            else{
-                p=t;
-                t=t->right;
-            }
+  void insert(int val)
+  {
+    node *t = NULL;
+    node *p = NULL;
+    node *temp = new node;
+    temp->item = val;
+    temp->left = NULL;
+    temp->right = NULL;
+    if (root == NULL)
+    {
+      root = temp;
+    }
+    else
+    {
+      node *t = root;
+      while (t)
+      {
+        if (val < t->item)
+        {
+          p = t;
+          t = t->left;
         }
-        // if the value situated on the leaf node
-        if(t->left==NULL && t->right==NULL){
-            if(p->left->item==val){
-                delete t;
-                p->left = NULL;
-            }
-            else{
-                delete t;
-                p->right = NULL;
-            }
-            return;
+        else
+        {
+          p = t;
+          t = t->right;
         }
+      }
 
-
-        
-
-
-
-        
-        
-
-
-
-}
+      if (val < p->item)
+      {
+        p->left = temp;
+      }
+      else
+      {
+        p->right = temp;
+      }
+    }
+  }
 };
 
 BST::BST()
 {
-    root=NULL;
+  root = NULL;
 }
+//BST b2(b1)
+BST::BST(BST &B){
 
-BST::~BST()
-{
 }
+// BST::~BST(){
+//   delete temp;
+// }
